@@ -551,8 +551,7 @@ class DashChatState extends State<DashChat> {
                   if (widget.chatFooterBuilder != null)
                     widget.chatFooterBuilder(),
                   if (!widget.readOnly)
-                    SafeArea(
-                      child: ChatInputToolbar(
+                    ChatInputToolbar(
                         key: inputKey,
                         sendOnEnter: widget.sendOnEnter,
                         textInputAction: widget.textInputAction,
@@ -587,9 +586,7 @@ class DashChatState extends State<DashChat> {
                             ? widget.scrollController
                             : scrollController,
                         focusNode: inputFocusNode,
-                        reverse: widget.inverted,
-                      ),
-                    )
+                        reverse: widget.inverted)
                 ],
               ),
               if (visible && !_initialLoad)
